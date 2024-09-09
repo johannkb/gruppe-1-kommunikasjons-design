@@ -1,0 +1,6 @@
+.artikkel{
+    display: flex;
+    width: auto;
+    height:auto;
+    flex-direction: column;
+}
