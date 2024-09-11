@@ -1,0 +1,101 @@
+
+/* Grunnleggende styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.header {
+    background: #e6e6e6;
+    padding: 10px;
+    text-align: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #e9ecef;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #6c757d;
+    width: 100%;
+}
+
+
+article h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+
+.image-wrapper {
+    position: relative; 
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+
+.image-wrapper h2 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px; 
+    border-radius: 8px;
+    width: 80%; 
+    word-wrap: break-word; 
+    text-align: center; 
+    box-sizing: border-box;
+    z-index: 10; 
+    pointer-events: none; 
+}
+
+
+
+article p {
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    z-index: 3;
+    position: relative;
+    font-size: large;
+}
+
+
+article > * {
+    position: relative;
+}
+
+article h2 + p {
+    margin-top: 40px; 
+}
