@@ -50,7 +50,8 @@ article img {
     width: 100%;
     height: auto;
     display: block;
-    margin: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 
@@ -79,7 +80,13 @@ article img {
     z-index: 10; 
     pointer-events: none; 
 }
-
+.image-wrapper h3 {
+  margin-right: 100%;
+  color: grey;
+  margin-top: 0;
+  font-size: 0.8em;
+  display: ruby-text;
+}
 
 
 article p {
