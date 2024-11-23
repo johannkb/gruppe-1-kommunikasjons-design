@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
 }
 .header {
@@ -20,10 +22,69 @@ body {
     background-repeat: no-repeat;
 }
 
+/*@media screen and (max-width: 700px){
+    
+}
+*/
 .scroll-indicator img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}
+h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+section{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.outercontainer{
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 25px;
+    display: flex;
+    padding: 15px;
+    border: 2px solid black;
+    flex-direction: column;
+    max-width: 50%;
+    justify-content: center;
+}
+.outercontainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 footer {
     background-color: #e9ecef;
@@ -31,5 +92,74 @@ footer {
     text-align: center;
     font-size: 0.9em;
     color: #6c757d;
+
+}
+#map {
+    height: 350px;
     width: 100%;
+    border: 1px solid black;
+    margin-right: 1rem;
+    border-radius: 25px;
+}
+#map1 {
+    height: 350px;
+    width: 100%;
+    border: 1px solid black;
+    margin-right: 1rem;
+    border-radius: 25px;
+}
+@media screen and (max-width: 700px) {
+    .outercontainer {
+        margin: 1rem 1rem 1rem 30px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border: 2px solid black;
+        max-width: 100%;
+        height: 100%;
+    }
+    p {
+        word-wrap: break-word; /* Bryter ord ved behov */
+        overflow-wrap: break-word; /* Sikrer at teksten brytes innenfor beholderen */
+        hyphens: auto; /* Legger til bindestreker der det er nødvendig */
+        line-height: 1.6; /* Øker linjeavstanden for bedre lesbarhet */
+    }
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 30px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    h1{
+        padding-left: 50px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin: 0;
+    }
+    h2{
+        padding-left: 50px;
+        margin: 0;
+    }
+    .container{
+    
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #map {
+        flex: none; /* Hindrer kartet i å justere størrelsen */
+        width: 100%; /* Mindre bredde for mobil */
+        height: 300px; /* Mindre høyde for mobil */
+    }
+    #map1 {
+        flex: none; /* Hindrer kartet i å justere størrelsen */
+        width: 100%; /* Mindre bredde for mobil */
+        height: 300px; /* Mindre høyde for mobil */
+    }
 }
