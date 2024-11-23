@@ -12,7 +12,13 @@ body {
     max-width: 900px;
     margin: 0 auto;
 }
-
+.header-template {
+    
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    
+}
 header {
     background-color: #003366;
     color: #fff;
