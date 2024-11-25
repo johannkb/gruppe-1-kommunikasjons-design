@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidslinje Timeline</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+            font-size: 20px;
+            width: 100%;
+        }
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .header-template {
+            
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            
+        }
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .timeline-item {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+            background: #ffffff;
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            gap: 20px;
+        }
+
+        /* Define grid template areas to alternate layout */
+        .timeline-item:nth-child(odd) {
+            grid-template-areas: "text image";
+        }
+
+        .timeline-item:nth-child(even) {
+            grid-template-areas: "image text";
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .text-section {
+            grid-area: text;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 300px;
+        }
+
+        .image-section {
+            grid-area: image;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .year {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .image-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        /* Styling for article-like section */
+        .article-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 1em;
+            color: #333;
+            text-align: center;
+        }
+
+        .article-section img {
+            max-width: 800px;
+            width: 100%; /* Set width similar to top images */
+            height: auto;
+            margin: 20px auto; /* Center images and add spacing */
+            border-radius: 10px; /* Consistent style with timeline items */
+        }
+
+        /* Additional content at the bottom */
+        .extra-content {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background: #e0e0e0;
+            border-top: 2px solid #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .timeline-item {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "image"
+                    "text";
+            }
+            .text-section {
+                min-width: auto;
+            }
+        }
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header-template">
+        <a href="../index/index.html">Hjem</a>
+        <p id="groupname">Ekte Gruppe 1 forside</p>
+    </header>
+    <div class="timeline-container">
+        <div class="header">Lapskaus og Lutefisk til Sushi og Tacofredag: Norske Middagsbord i Forandring</div>
+
+        <!-- Timeline item 1 -->
+        <div class="timeline-item">
+            <div class="text-section">
+                <div>
+                    <div class="year">1800: Lapskaus: En Norsk Klassisk Hverdagsrett</div>
+                    <p>Lapskaus har vært en grunnleggende del av norsk matkultur siden 1800-tallet, utviklet som en praktisk og næringsrik rett for å utnytte tilgjengelige ingredienser. Lapskaus ble et økonomisk og mettende måltid.
+                    Retten var fleksibel og kunne varieres etter hva som var tilgjengelig. Potetene, som var en billig og viktig råvare, utgjorde ofte hoveddelen av retten, mens kålrot og gulrøtter ble brukt som grønnsaker. Lapskaus ble et symbol på norsk husmannskost og forble en populær rett.</p>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="image0.jpg" alt="1800">
+            </div>
+        </div>
+
+        <!-- Timeline item 2 -->
+        <div class="timeline-item">
+            <div class="image-section">
+                <img src="1940.jpg" alt="1940">
+            </div>
+            <div class="text-section">
+                <div>
+                    <div class="year">1940: Kjøttkaker i Brunsaus med Poteter</div>
+                    <p>Under 1940-tallet, i krigstidens knapphet, ble kjøttkaker i brunsaus med poteter en viktig rett for nordmenn. Poteter, en lett tilgjengelig rotfrukt, ble servert til kjøttkakene og var en viktig del av måltidet, og forblir en viktig del av norsk matkultur.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline item 3 -->
+        <div class="timeline-item">
+            <div class="text-section">
+                <div>
+                    <div class="year">1960: Pølser i Brød, favorittmat i Norge</div>
+                    <p>På 1960-tallet ble pølser i brød en populær og praktisk gatemat i Norge. Kombinasjonen av en saftig pølse i mykt brød ble et symbol på modernitet og nye matvaner. Pølse i brød var lett tilgjengelig. Pølsekiosker ble møtesteder for folk i byene, og retten fikk en spesiell plass i norsk matkultur som en enkel, sosial matopplevelse.</p>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="1960.webp" alt="1960">
+            </div>
+        </div>
+
+        <!-- Timeline item 4 -->
+        <div class="timeline-item">
+            <div class="image-section">
+                <img src="1980.jpg" alt="1980">
+            </div>
+            <div class="text-section">
+                <div>
+                    <div class="year">1980: Grandiosa, den Norske Favoritten</div>
+                    <p>På 1980-tallet ble Grandiosa frossenpizza en stor suksess i Norge og et symbol på den moderne hverdagen. Introduksjonen av Grandiosa i 1980 revolusjonerte ferdigmatmarkedet med sin enkelhet, hastighet og rimelighet. Frossenpizzaen passet perfekt for den travle livsstilen på den tiden og ble raskt populær blant både unge og familier. Med sin norske vri på den internasjonale pizzaen ble Grandiosa et kulturelt fenomen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="image-section">
+                <img src="2000.webp" alt="2000">
+            </div>
+            <div class="text-section">
+                <div>
+                    <div class="year">2000: Taco, en Kulturell Ikon i Norge</div>
+                    <p>På 2000-tallet ble taco en av de mest populære middagene i norske hjem, og et samlingspunkt for familier. Taco, som opprinnelig var en mexicansk rett, fikk en norsk vri og ble synonymt med helgekos og sosialt samvær. Med økt globalisering og ferdigproduserte tacokits, ble taco en enkel og rask middag som passet perfekt til det travle 2000-tallet. Tradisjonen med «tacofredag» vokste frem, og taco ble en ukentlig sosial begivenhet i mange hjem.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="image-section">
+                <img src="2010.webp" alt="2010">
+            </div>
+            <div class="text-section">
+                <div>
+                    <div class="year">2010: Pinnekjøtt, fra Julemat til Året Rundt-favoritt</div>
+                    <p>Pinnekjøtt, den tradisjonelle retten med saltet og tørket lammeribbe, opplevde en renessanse på 2010-tallet og ble mer populær enn noen gang, ikke bare til jul, men også på andre festlige anledninger. Økt interesse for norske mattradisjoner og tilgjengeligheten av ferdig tilberedt pinnekjøtt gjorde retten mer populær blant en yngre generasjon.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="image-section">
+                <img src="2024.jpg" alt="2024">
+            </div>
+            <div class="text-section">
+                <div>
+                    <div class="year">2024: Sushi, en Norsk Favoritt</div>
+                    <p>I 2024 har sushi blitt en av Norges mest populære matretter, tilgjengelig både i byer og mindre lokalsamfunn. Den japanske retten har tilpasset seg norske smakspreferanser, der laks og lokal sjømat som torsk og kveite ofte inngår. Retten kombinerer global inspirasjon med norske ingredienser, noe som sikrer dens plass som en moderne klassiker i norsk matkultur.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article-like section with vertically stacked images and text -->
+    <div class="article-section">
+        <h2>Trender over tid</h2>
+
+        <img src="graf1.png" alt="Sample 1">
+        <p>Utviklingen i forbruk av korn (i kilogram) i Norge fra 1953 til 2022. Dataene indikerer en betydelig nedgang i forbruket mellom 1953 og 1970, etterfulgt av en gradvis økning. De lavere nivåene kan skyldes endringer i kostholdsvaner, helsebevissthet, eller endringer i tilgjengelighet av andre matvarer.</p>
+
+        <img src="graf2.png" alt="Sample 2">
+        <p>Utviklingen i forbruk av grønnsaker (i kilogram) i Norge fra 1953 til 2022. Forbruket har hatt en jevn økning gjennom årene, med en markant vekst spesielt fra 1980-tallet og fremover. Trenden har vært en positiv økning, som kan tyde på en generell økning i etterspørsel og tilgjengelighet av grønnsaker i Norge.</p>
+
+        <img src="graf3.png" alt="Sample 3">
+        <p>Utviklingen i kjøttforbruket (i kilogram) per person i Norge fra 1959 til 2022. Forbruket av kjøtt har generelt økt betydelig siden 1950-tallet. Dette kan reflektere en gradvis økt bevissthet rundt miljø og helse, samt at flere kanskje reduserer kjøttforbruket i nyere tid. Til tross for dette har kjøttforbruket holdt seg høyt sammenlignet med tidligere år.</p>
+
+        <img src="graf4.png" alt="Sample 4">
+        <p>Utviklingen i melkekonsum per innbygger i Norge fra 1953 til 2022. Utover 1970- og 1980-tallet begynte konsumet å synke merkbart, og det har fortsatt å avta jevnt frem til dagens nivå på rundt 50 liter per innbygger.</p>
+        <h5>Info hentet fra <a href="https://www.helsedirektoratet.no/rapporter/utviklingen-i-norsk-kosthold-2023/matvareforbruk">Helsedirektoratet</a></h5>
+    </div>
+    <footer>
+        <p>Gruppe medlemmer og roller</p>
+        <p>Journalist: Frida</p>
+        <p>Web Developer: Johann</p>
+        <p>Designer: Ahmed</p>
+        <p>Producer: Sebastian</p>
+    </footer>
+</body>
+</html>
