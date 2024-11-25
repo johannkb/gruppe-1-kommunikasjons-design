@@ -14,14 +14,30 @@
 
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
             background-color: #f4f4f4;
             color: #333;
             overflow-x: hidden;
             font-size: 20px;
+            width: 100%;
+        }
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
         }
 
         .header-template {
-            background: #e6e6e6;
+            
             padding: 10px;
             text-align: center;
             text-decoration: none;
@@ -106,7 +122,8 @@
         }
 
         .article-section img {
-            width: 800px; /* Set width similar to top images */
+            max-width: 800px;
+            width: 100%; /* Set width similar to top images */
             height: auto;
             margin: 20px auto; /* Center images and add spacing */
             border-radius: 10px; /* Consistent style with timeline items */
@@ -136,12 +153,18 @@
             }
         }
         footer {
-            background-color: #e9ecef;
-            padding: 10px;
+            background-color: #003366;
+            color: #fff;
             text-align: center;
-            font-size: 0.9em;
-            color: #6c757d;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%;
         }
+
+        footer p {
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
