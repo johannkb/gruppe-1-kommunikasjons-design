@@ -54,7 +54,9 @@ article img {
     margin-bottom: 0;
 }
 
-
+h3{
+    padding:1rem
+}
 .image-wrapper {
     position: relative; 
     display: inline-block;
